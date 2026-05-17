@@ -1,4 +1,4 @@
-# state-app
+# State-App
 
 A basic React application bootstrapped with [Vite](https://vitejs.dev/). This project demonstrates basic state management and component rendering in React, featuring a `LudoBoard` component.
 

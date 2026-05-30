@@ -1,13 +1,25 @@
 import { useState } from "react";
 
-export default function Form(){
-   let [name,setName]=useState("");
-   return(
+export default function Form() {
+   let [name, setName] = useState("");
+
+   let handleNameChange =(event) =>{
+      setName(event.target.value)
+   };
+   return (
       <>
-      <form style={{marginTop:"250px"}} >
-         <input placeholder="enter your full name" type="text"/>
-         <button>Submit</button>
-      </form>
+         <form style={{ marginTop: "250px" }} >
+            <label htmlFor="username" style={{marginRight:"50px"}}>Full Name</label>
+            <input
+               placeholder="enter your full name" 
+               type="text"
+               value={name}
+               id="username"
+               onChange={(e)=>setName(e.target.value)} />
+           
+                
+            <button style={{marginLeft:"50px"}}>Submit</button>
+         </form>
       </>
    );
 }

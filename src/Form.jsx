@@ -3,7 +3,10 @@ import { useState } from "react";
 export default function Form() {
    let [name, setName] = useState("");
    let [username,setUsername]=useState("");
-
+   let [formData,setFromData]=useState({
+      fullName:"",
+      username:"",
+   })
    let handleNameChange =(event) =>{
       setName(event.target.value)
    };
@@ -23,7 +26,7 @@ export default function Form() {
                type="text"
                value={username}
                id="username"
-               onChange={(e1)=>setUsername(e1.target.value)} />
+               onChange={(e)=>setUsername(e.target.value)} />
            
                 
             <button style={{marginLeft:"50px"}}>Submit</button>

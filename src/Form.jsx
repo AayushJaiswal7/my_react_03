@@ -5,11 +5,8 @@ export default function Form() {
    let [username,setUsername]=useState("");
    let [formData,setFromData]=useState({
       fullName:"",
-      username:"",
+      userName:"",
    })
-   let handleNameChange =(event) =>{
-      setName(event.target.value)
-   };
    return (
       <>
          <form style={{ marginTop: "250px" }} >
